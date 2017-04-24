@@ -1,0 +1,7 @@
+<h3>Title: <%= @post.title %></h3>
+<h5>URL: <%= @post.url %></h5>
+<p>Content: <%= @post.content %></p>
+
+<p>Author: <%= @post.author.username %></p>
+<p>Posted to Sub: <%= @post.sub.title %></p>
+<%= link_to "Back", sub_url(@post.sub_id) %>

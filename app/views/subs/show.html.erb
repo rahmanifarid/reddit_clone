@@ -1,0 +1,18 @@
+<h3>Title: <%= @sub.title %></h3>
+<h5>Description:  <%= @sub.description %></h5>
+
+
+<p>Created by: <%= @sub.moderator.username %></p>
+
+<h3>Posts to this Sub: </h3>
+<ul>
+  <% @sub.posts.each do |post| %>
+    <li><%= link_to post.title, sub_post_url(sub_id: @sub.id, id: post.id) %></li>
+
+  <%end%>
+</ul>
+
+
+<%= link_to "Post to this Sub", new_sub_post_url(@sub) %>
+<br>
+<%= link_to "All Subs", subs_url %>
