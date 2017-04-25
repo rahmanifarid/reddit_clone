@@ -15,10 +15,10 @@ class PostsController < ApplicationController
   end
 
   def create
-    
+
     @post = Post.new(post_params)
     @post.user_id = current_user.id
-    @post.sub_id = Sub.find(params[:sub_id]).id
+    # debugger
     if @post.save
       redirect_to sub_post_url(id: @post.id)
     else

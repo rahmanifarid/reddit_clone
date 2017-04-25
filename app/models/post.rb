@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
- validates :title, :sub_id, :author, presence: true
+ validates :title, :author, presence: true
 
-  has_many :post_subs,
+  has_many :post_subs, inverse_of: :post,
   foreign_key: :post_id,
   class_name: "PostSub"
 

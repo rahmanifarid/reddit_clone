@@ -13,7 +13,7 @@
   </label>
 <br><p>Other Subs:</p>
   <% @subs.each do |sub| %>
-    <input type="checkbox" name="post[sub_ids][]" value="<%= sub.id %>"><%= sub.title%><br>
+    <input type="checkbox" name="post[sub_ids][]" value=<%= sub.id %>><%= sub.title%><br>
   <%end%>
 <br><br><br><br><br>
   <input type="submit" name="" value="Create Post">

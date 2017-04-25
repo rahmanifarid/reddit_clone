@@ -1,5 +1,5 @@
 class SubsController < ApplicationController
-  before_action :logged_in, only:[:new, :create, :edit, :update]
+  before_action :require_logged_in, only:[:new, :create, :edit, :update]
   def index
     @subs = Sub.all
   end
